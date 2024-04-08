@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_dotnetpractisems1_1693936664799-pr-trigger-input-set
+  identifier: Build_dotnetpractisems1_1693936664799prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_dotnetpractisems1_1693936664799
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>

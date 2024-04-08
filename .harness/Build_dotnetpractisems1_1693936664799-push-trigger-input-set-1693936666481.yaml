@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_dotnetpractisems1_1693936664799-push-trigger-input-set
+  identifier: Build_dotnetpractisems1_1693936664799pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_dotnetpractisems1_1693936664799
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
