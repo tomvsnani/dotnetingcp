@@ -12,7 +12,7 @@ Serilog.Debugging.SelfLog.Enable(msg => Debug.WriteLine(msg));
 
 builder.Host.UseSerilog((ctx,t) => {
   
-  
+  t.MinimumLevel.Is(Serilog.Events.LogEventLevel.Error);
 
     t.ReadFrom.Configuration(ctx.Configuration)
    
