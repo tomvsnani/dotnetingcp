@@ -65,7 +65,7 @@ namespace WebApplication1.Controllers
 
         public string helloo()
         {
-            _logger.LogError("from ms2");
+            _logger.LogDebug("from ms2");
             return "from ms2 revision";
         }
 

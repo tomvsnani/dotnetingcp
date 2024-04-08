@@ -2,23 +2,20 @@
 using Google.Api;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-using Serilog.Sinks.GoogleCloudLogging;
-using System.Diagnostics;
 using WebApplication1.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-Serilog.Debugging.SelfLog.Enable(msg => Debug.WriteLine(msg));
-
 builder.Host.UseSerilog((ctx,t) => {
   
-    t.MinimumLevel.Is(Serilog.Events.LogEventLevel.Debug);
+    t.MinimumLevel.Information();
 
-    t.ReadFrom.Configuration(ctx.Configuration)   
+    t.ReadFrom.Configuration(ctx.Configuration)
+   
+     
      ;
-
 
 
 });
@@ -42,7 +39,7 @@ var app = builder.Build();
 
 
 
-
+app.UseHttpLogging();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
