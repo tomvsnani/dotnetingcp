@@ -5,7 +5,8 @@
    
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "GOOGLE_APPLICATION_CREDENTIALS": "C:\\Users\\pramu\\OneDrive\\Desktop\\plasma-yeti-415904-5247b950531f.json"
       },
       "dotnetRunMessages": true,
       "applicationUrl": "https://localhost:7215;http://localhost:5193"

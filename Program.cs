@@ -2,15 +2,17 @@
 using Google.Api;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using System.Diagnostics;
 using WebApplication1.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+Serilog.Debugging.SelfLog.Enable(msg => Debug.WriteLine(msg));
 
 builder.Host.UseSerilog((ctx,t) => {
   
-    t.MinimumLevel.Information();
+  
 
     t.ReadFrom.Configuration(ctx.Configuration)
    
